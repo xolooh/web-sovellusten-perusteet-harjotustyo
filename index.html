@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.6.0/css/all.min.css">
+   <title>FakeShop</title>
+</head>
+
+<body>
+   <main>
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+   <a class="navbar-brand" href="#"><strong>Fakeshop</strong></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+   </button>
+   <a class="Klaskuri" data-translate="laskuri">Kävijälaskuri</a><div id="laskuri"></div>
+
+   <select id="language-select" onchange="changeLanguage(this.value)">
+      <option value="fi">Suomi</option>
+      <option value="en">English</option>
+    </select>
+
+   <div class="collapse navbar-collapse" id="navbarSupportedContent">
+   <ul class="navbar-nav mr-auto"></ul>
+   <form class="form-inline my-2 my-lg-0">
+   <input class="form-control mr-sm-2" type="search" id="search_field"  placeholder="Hae tuote" aria-label="Search">
+   </form>
+   <button type="button" class="btn btn-success my-2 my-sm-0" data-toggle="modal" data-target="#staticBackdrop">
+   <i class="fas fa-shopping-cart total-count"></i>
+   </button></div></nav>
+   <section>
+   <div class="featured-area pt-100 pb-70">
+   <div class="container">
+   <div class="tab featured-tab-area">
+   <div class="row justify-content-center">
+   <div class="col-lg-4 col-md-8">
+   <ul class="tabs active">
+   <li class=""><a href="#" data-translate="All">Kaikki</a></li>
+   <li class=""><a href="#" data-translate="drinks">Juomat</a></li>
+   <li class=""><a href="#" data-translate="sweets">Makeiset</a></li>
+   <li class=""><a href="#" data-translate="clothing">Vaatteet</a></li>
+   </ul></div></div>
+   <div class="tab_content current active pt-45"><div class="tabs_item current"><div class="row justify-content-center">
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma2.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Novelle plus</a></h3>
+   <hr>
+   <div class="content-in"><h4>2€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Novelleplus" data-price="2" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma3.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Red Bull </a></h3>
+   <hr>
+   <div class="content-in"><h4>2.5€</h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="RedBull" data-price="2.5" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma5.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Monster juiced</a></h3>
+   <hr>
+   <div class="content-in"><h4>2€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Monsterjuiced" data-price="2" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma8.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Fanta</a></h3>
+   <hr>
+   <div class="content-in"><h4>0.7€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Fanta" data-price="0.7" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K1.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">WarHeads</a></h3>
+   <hr>
+   <div class="content-in"><h4>1.49€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="WarHeads" data-price="1.49" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K2.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">POP BOOM </a></h3>
+   <hr>
+   <div class="content-in"><h4>0.49€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="POPBOOM" data-price="0.49" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K3.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Good Stuff</a></h3>
+   <hr>
+   <div class="content-in"><h4>0.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="GoodStuff" data-price="0.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K4.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="karkki4"><h3><a href="#">Super salmiakki</a></h3>
+   <hr>
+   <div class="content-in"><h4>0.99€</h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Supersalmiakki" data-price="0.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V1.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="hoodie"><h3><a href="#">Huppari</a></h3>
+   <hr>
+   <div class="content-in"><h4>49.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Huppari" data-price="49.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V2.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="TrustNoOne"><h3><a href="#">TrustNoOne T-Paita</a></h3>
+   <hr>
+   <div class="content-in"><h4>19.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="TrustNoOneT-Paita" data-price="19.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V3.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="moneyTshirt"><h3><a href="#">MoneyFastNeed T-Paita</a></h3>
+   <hr>
+   <div class="content-in"><h4>19.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="MoneyFastNeedT-Paita" data-price="19.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V6.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="pewpew"><h3><a href="#">PEW PEW PEW T-Paita</a></h3>
+   <hr>
+   <div class="content-in"><h4>19.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="PEWPEWPEWT-Paita" data-price="19.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div></div></div>
+   <div class="tabs_item"><div class="row justify-content-center"><div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma8.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Fanta</a></h3>
+   <hr>
+   <div class="content-in"><h4>0.7€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Fanta" data-price="0.7" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma2.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Novelle plus</a></h3>
+   <hr>
+   <div class="content-in"><h4>2€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Novelleplus" data-price="2" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma3.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Red Bull</a></h3>
+   <hr>
+   <div class="content-in"><h4>2.5€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="RedBull" data-price="2.5" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/Juoma5.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Monster Juiced</a></h3>
+   <hr>
+   <div class="content-in"><h4>2€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="MonsterJuiced" data-price="2" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div></div></div>
+   <div class="tabs_item"><div class="row justify-content-center"><div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K1.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">WarHeads </a></h3>
+   <hr>
+   <div class="content-in"><h4>1,49€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="WarHeads" data-price="1.49" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K2.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">POP BOOM</a></h3>
+   <hr>
+   <div class="content-in"><h4>0.49€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="POPBOOM" data-price="0.49" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K3.png" alt="Images">
+   </a></div>
+   <div class="content"><h3><a href="#">Good Stuff</a></h3>
+   <hr>
+   <div class="content-in"><h4>0.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="GoodStuff" data-price="0.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/K4.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="karkki4"><h3><a href="#">Super salmiakki</a></h3>
+   <hr>
+   <div class="content-in"><h4>0.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Supersalmiakki" data-price="0.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div></div></div>
+   <div class="tabs_item"><div class="row justify-content-center"><div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V1.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="hoodie"><h3><a href="#">Huppari	</a></h3>
+   <hr>
+   <div class="content-in"><h4>49.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="Huppari" data-price="49.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V2.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="TrustNoOne"><h3><a href="#">TrustNoOne T-Paita </a></h3>
+   <hr>
+   <div class="content-in"><h4>19.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="TrustNoOneT-Paita" data-price="19.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V3.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="moneyTshirt"><h3><a href="#">MoneyFastNeed T-Paita</a></h3>
+   <hr>
+   <div class="content-in"><h4>19.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="MoneyFastNeedT-Paita" data-price="19.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div>
+   <div class="col-lg-3 col-md-6"><div class="tuote"><div class="tuote-img"><a href="#"><img src="img/V6.png" alt="Images">
+   </a></div>
+   <div class="content" data-translate="pewpew"><h3><a href="#">PEW PEW PEW T-Paita</a></h3>
+   <hr>
+   <div class="content-in"><h4>19.99€ </h4></div>
+   <hr>
+   <div class="featured-content-list">
+   <button type="button" data-name="PEWPEWPEWT-Paita" data-price="19.99" class="default-btn border-radius-5" data-translate="addToCart">Lisää ostoskoriin</button>
+   </div></div></div></div></div></div>
+   <p id="not_found"></p>
+   </div></div></div></div>
+   </section>
+   <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"aria-labelledby="staticBackdropLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered">
+   <div class="modal-content">
+   <div class="modal-header">
+   <h5 class="modal-title" id="staticBackdropLabel" data-translate="cart">Ostoskori</h5>
+   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+   <span aria-hidden="true">&times;</span>
+   </button></div>
+   <div class="modal-body">
+   <table class="show-cart table"></table>
+   <div class="grand-total" data-translate="Pricee">Kokonaishinta: <span class="total-cart"></span>€</div>
+   </div>
+   <div class="modal-footer">
+   <button type="button" class="btn btn-secondary" data-dismiss="modal" data-translate="Close">Sulje</button>
+   </div></div></div></div></main>
+   <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="script.js"></script>
+   <script src="Yhteystiedot.js"></script>
+   <script src="laskuri.js"></script>
+   <script src="kaannokset.js"></script>
+   <footer><nav>
+   <h3 data-translate="customerService">Verkkokaupan asiakaspalvelu</h3>
+  <div>Puh. 000 111222333</div>
+  <div data-translate="weekdays">Arkisin klo 08.00-15.00.</div>
+  <div data-translate="contactForm">Voit myös ottaa yhteyttä alla olevasta lomakkeesta.</div>
+  <main>
+   <h2 data-translate="contactHeading">Ota yhteyttä</h2>
+   <form id="contactForm">
+   <div><label for="name" data-translate="nameLabel">Nimi:</label></div>
+   <div><input type="text" id="name" name="name" required></div>
+   <div><label for="email" data-translate="emailLabel">Sähköposti:</label></div>
+   <div><input type="email" id="email" name="email" required></div>
+   <div><label for="message" data-translate="messageLabel">Viesti:</label></div>
+   <div><textarea id="message" name="message" rows="4" required></textarea></div>
+   <div><button type="submit" data-translate="sendButton">Lähetä viesti</button></div>
+   </form></main></nav></footer></body></html>
